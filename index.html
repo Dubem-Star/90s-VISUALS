@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Favicons -->
+    <link href="photos/90's_favicon.png" type="image/png" rel="icon" />
+    <link href="photos/90's_favicon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Bootstrap CSS CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS (Animate on Scroll) CSS CDN Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- GLightbox CSS CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <!-- Swiper CSS CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+
+  <body id="homePage" class="home-page">
+    <div class="overlay" id="overlay"></div>
+    <i class="mobile-nav-toggle d-none bi bi-list" id="toggleBtn"></i>
+
+    <div class="nav-menu-toggler" id="navMenuToggler">
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#heroSection" class="home">Home</a></li>
+          <li class="dropdown-mobile">
+            <a href="#gallerySection"
+              ><span>Gallery</span>
+              <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
+            </a>
+
+            <!-- <ul>
+                <li><a href="#">Nature</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Animals</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Travel</a></li>
+              </ul> -->
+          </li>
+          <li><a href="#aboutSection">About</a></li>
+          <li><a href="#servicesSection"> Services</a></li>
+          <li><a href="#contactSection">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header d-flex sticky-top align-items-center" id="navHeader">
+      <div
+        class="navbar-container container-fluid position-relative d-flex align-items-center justify-content-between py-3"
+      >
+        <a href="index.html" class="logo text-decoration-none">
+          <img src="photos/90's_favicon.png" class="real" alt="brand-logo" />
+          <img src="photos/90's_favicon.png" class="fake" alt="brand-logo" />
+          <!-- <h1 class="sitename">90's</h1> -->
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="#heroSection" class="nav-link">Home</a></li>
+
+            <li class="dropdown">
+              <a href="#gallerySection" class="nav-link"
+                ><span>Gallery</span>
+                <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
+              </a>
+
+              <!-- <ul>
+                <li><a href="#">Nature</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Animals</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Travel</a></li>
+              </ul> -->
+            </li>
+            <li><a href="#aboutSection" class="nav-link">About</a></li>
+            <li><a href="#servicesSection" class="nav-link"> Services</a></li>
+            <li><a href="#contactSection" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-social-links">
+          <a href="#" class="social-link twitter">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="social-link facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="social-link instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="social-link linkedin">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Page********************* -->
+
+    <main class="main">
+      <!-- *****************Hero Section (Home)********************* -->
+
+      <section class="hero hero-section mb-5" id="heroSection">
+        <div class="pt hero-img-wrapper d-flex justify-content-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10 text-center">
+                <h2 id="heroTitle" class="hero-title">
+                  <span class="title">I CREATE.</span>
+                  <span class="highlight title">I CAPTURE.</span>
+                  <span class="title">I CONNECT.</span>
+                </h2>
+                <h4 class="ps">
+                  <p>From concept to screen.</p>
+                  <p>90s visuals Concept — originality redefined.</p>
+                </h4>
+                <a
+                  href="#"
+                  class="btn-get-started btn text-light text-decoration-none"
+                  >Available for Hire</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </section>
+
+      <!-- ******************Gallery Section******************** -->
+
+      <section class="gallery-section mt-5 mb-4" id="gallerySection">
+        <div
+          class="container-fluid cont"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div id="colContainer" class="row gy-4 justify-content-center">
+            <h2 class="gallery-title mb-4 text-center fs-2">GALLERY</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- ******************About Section******************** -->
+      <section class="about-section" id="aboutSection">
+        <div class="container wrapper" data-aos="fade-up" data-aos-delay="100">
+          <div class="row justify-content-center abt-cont">
+            <h2 class="text-center mb-5 fs-2">ABOUT ME</h2>
+            <div class="col-lg-6 about-me-container mt-3">
+              <h4 class="fs-4">
+                Hi, I'm <span class="green-name">Seyi Oloye</span>
+              </h4>
+
+              <p class="mt-4 my-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error,
+                repudiandae voluptatem cum esse cupiditate incidunt, nihil
+                dolorem nisi tempora beatae, dolore dolores in assumenda quis
+                cumque rerum veritatis officiis aperiam! Odit alias, consectetur
+                ipsum minus veritatis neque ratione fugiat aliquam, <br />
+                <br />
+                sit sequi repudiandae quas enim quasi. Corporis, ducimus.
+                Asperiores molestias animi esse, pariatur sunt corrupti totam
+                excepturi deserunt voluptates vitae. <br />
+                <br />
+                Numquam reprehenderit dolor illo nihil, quidem consequuntur!
+                Praesentium mollitia alias corrupti, repellat quos accusamus
+                libero eum blanditiis animi voluptas aperiam incidunt
+                necessitatibus, fugit cum suscipit beatae hic omnis? Aperiam
+                perspiciatis quis expedita et praesentium adipisci similique
+                ipsam, ea ad veritatis quae ipsum. Assumenda esse nisi numquam
+                aliquid iusto? Fugit repellendus soluta cumque velit nisi
+                praesentium ab sed sequi!
+              </p>
+
+              <h4 class="fs-5 mt-5">I Professionalize in</h4>
+
+              <div class="services-container container">
+                <div class="services-wrapper row">
+                  <div class="col-6">
+                    <p>
+                      <i class="bi bi-check-lg save-icon save-btn"></i> Fashion
+                    </p>
+                    <p>
+                      <i class="bi bi-check-lg save-icon save-btn"></i> Wedding
+                    </p>
+                    <p>
+                      <i class="bi bi-check-lg save-icon save-btn"></i> Product
+                    </p>
+                  </div>
+
+                  <div class="col-6">
+                    <p>
+                      <i class="bi bi-check-lg save-icon save-btn"></i> Portaits
+                    </p>
+                    <p>
+                      <i class="bi bi-check-lg save-icon save-btn"></i> Sports
+                    </p>
+                    <p>
+                      <i class="bi bi-check-lg save-icon save-btn"></i> Birthday
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 my-image-container mt-3 text-center">
+              <img
+                src="photos/profile_2.jpg"
+                alt="my-pic"
+                class="my-image img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ******************Services Section******************** -->
+      <section class="services-section mb-5" id="servicesSection">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="text-center mb-4 fs-2">SERVICES</h2>
+          <div
+            class="row gy-5 gx-4 mb-5 mt-2 top-container"
+            id="servicesContainer"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ******************Contact Section******************** -->
+      <section class="contact-section" id="contactSection">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="text-center mb-5 fs-2">CONTACT ME</h2>
+          <form action="#" class="contact-form" id="contactForm">
+            <div class="row gy-4 gx-3 justify-content-center">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control py-3"
+                  placeholder="First Name:"
+                  name="first-name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control py-3"
+                  placeholder="Last Name:"
+                  name="last-name"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <input
+                  type="email"
+                  class="form-control py-3"
+                  placeholder="Email:"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <input
+                  type="number"
+                  class="form-control py-3"
+                  placeholder="Phone Number:"
+                  name="phone-number"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <textarea
+                  name="message"
+                  class="form-control message"
+                  placeholder="Message:"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="col-12 button-container">
+                <button class="btn submit-button" type="submit">
+                  Submit Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ******************Footer Section******************** -->
+
+    <footer class="footer">
+      <p
+        class="copyright text-align-center text-light d-flex align-items-center"
+      >
+        © 2025 90's Visuals. All Rights Reserved
+      </p>
+
+      <div class="footer-social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <p class="praise d-flex align-items-center">
+        Built by <span class="me ms-1">Dubem</span>
+      </p>
+    </footer>
+
+    <!-- CDN JS Files -->
+    <!--- BootstrapJS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AOSJS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GLIightboxJS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox();
+    </script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="app.js"></script>
+  </body>
+</html>
