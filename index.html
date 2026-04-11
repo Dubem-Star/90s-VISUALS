@@ -52,7 +52,12 @@
 
   <body id="homePage" class="home-page">
     <div class="overlay" id="overlay"></div>
-    <i class="mobile-nav-toggle d-none bi bi-list" id="toggleBtn"></i>
+
+    <img
+      src="./photos/icons/hamburger.png"
+      class="mobile-nav-toggle d-none"
+      id="toggleBtn"
+    />
 
     <div class="nav-menu-toggler" id="navMenuToggler">
       <nav class="nav-menu" id="navMenu">
@@ -63,14 +68,6 @@
               ><span>Gallery</span>
               <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
             </a>
-
-            <!-- <ul>
-                <li><a href="#">Nature</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Animals</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Travel</a></li>
-              </ul> -->
           </li>
           <li><a href="#aboutSection">About</a></li>
           <li><a href="#servicesSection"> Services</a></li>
@@ -79,12 +76,15 @@
       </nav>
     </div>
 
-    <header class="header d-flex sticky-top align-items-center" id="navHeader">
+    <header
+      class="header d-flex fixed-top align-items-center w-100"
+      id="navHeader"
+    >
       <div
-        class="navbar-container container-fluid position-relative d-flex align-items-center justify-content-between py-3"
+        class="navbar-container container-fluid position-relative d-flex align-items-center justify-content-between max-width"
       >
         <a href="index.html" class="logo text-decoration-none">
-          <img src="photos/90's_favicon.png" class="real" alt="brand-logo" />
+          <img src="photos/90's_favicon(2).png" class="real" alt="brand-logo" />
           <img src="photos/90's_favicon.png" class="fake" alt="brand-logo" />
           <!-- <h1 class="sitename">90's</h1> -->
         </a>
@@ -98,18 +98,14 @@
                 ><span>Gallery</span>
                 <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
               </a>
-
-              <!-- <ul>
-                <li><a href="#">Nature</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Animals</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Travel</a></li>
-              </ul> -->
             </li>
             <li><a href="#aboutSection" class="nav-link">About</a></li>
-            <li><a href="#servicesSection" class="nav-link"> Services</a></li>
-            <li><a href="#contactSection" class="nav-link">Contact</a></li>
+            <li>
+              <a href="#servicesSection" class="nav-link"> Services</a>
+            </li>
+            <li>
+              <a href="#contactSection" class="nav-link">Contact</a>
+            </li>
           </ul>
         </nav>
 
@@ -136,23 +132,26 @@
       <!-- *****************Hero Section (Home)********************* -->
 
       <section class="hero hero-section mb-5" id="heroSection">
-        <div class="pt hero-img-wrapper d-flex justify-content-center">
-          <div class="container">
+        <div
+          class="hero-img-wrapper first-img d-flex align-items-center flex-column"
+          id="heroImgBg"
+        >
+          <div class="container tit" style="margin-top: 70px">
             <div class="row justify-content-center">
-              <div class="col-lg-10 text-center">
+              <div class="col-md-12 text-center">
                 <h2 id="heroTitle" class="hero-title">
-                  <span class="title">I CREATE.</span>
+                  <span class="text-white title">I CREATE.</span>
                   <span class="highlight title">I CAPTURE.</span>
                   <span class="title">I CONNECT.</span>
                 </h2>
                 <h4 class="ps">
                   <p>From concept to screen.</p>
-                  <p>90s visuals Concept — originality redefined.</p>
+                  <p>90s visuals Concept, originality redefined.</p>
                 </h4>
                 <a
-                  href="#"
-                  class="btn-get-started btn text-light text-decoration-none"
-                  >Available for Hire</a
+                  href="#contactSection"
+                  class="btn-get-started btn text-light text-decoration-none rounded-3"
+                  >BOOK A SESSION</a
                 >
               </div>
             </div>
@@ -163,23 +162,32 @@
 
       <!-- ******************Gallery Section******************** -->
 
-      <section class="gallery-section mt-5 mb-4" id="gallerySection">
-        <div
-          class="container-fluid cont"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+      <section class="gallery-section mt-5 mb-4 max-width" id="gallerySection">
+        <div class="container-fluid cont">
           <div id="colContainer" class="row gy-4 justify-content-center">
-            <h2 class="gallery-title mb-4 text-center fs-2">GALLERY</h2>
+            <h2 class="gallery-title text-center mb-0 section-title">
+              GALLERY
+            </h2>
+            <p class="text-center mb-4 mt-0 section-subtext">
+              Selected pieces from my collection
+            </p>
           </div>
         </div>
+        <button
+          class="btn btn-get-started mx-auto d-block py-2 px-3 text-light view-more rounded-3"
+        >
+          VIEW MORE
+        </button>
       </section>
 
       <!-- ******************About Section******************** -->
-      <section class="about-section" id="aboutSection">
-        <div class="container wrapper" data-aos="fade-up" data-aos-delay="100">
+      <section class="about-section cont max-width" id="aboutSection">
+        <div class="wrapper abt-wih">
           <div class="row justify-content-center abt-cont">
-            <h2 class="text-center mb-5 fs-2">ABOUT ME</h2>
+            <h2 class="text-center section-title mb-0">ABOUT ME</h2>
+            <p class="text-center mb-5 mt-0 section-subtext">
+              The eye behind the lens
+            </p>
             <div class="col-lg-6 about-me-container mt-3">
               <h4 class="fs-4">
                 Hi, I'm <span class="green-name">Seyi Oloye</span>
@@ -193,17 +201,10 @@
                 ipsum minus veritatis neque ratione fugiat aliquam, <br />
                 <br />
                 sit sequi repudiandae quas enim quasi. Corporis, ducimus.
-                Asperiores molestias animi esse, pariatur sunt corrupti totam
-                excepturi deserunt voluptates vitae. <br />
-                <br />
+                Asperiores molestias animi esse, pariatur sunt corrupti tota
                 Numquam reprehenderit dolor illo nihil, quidem consequuntur!
                 Praesentium mollitia alias corrupti, repellat quos accusamus
-                libero eum blanditiis animi voluptas aperiam incidunt
-                necessitatibus, fugit cum suscipit beatae hic omnis? Aperiam
-                perspiciatis quis expedita et praesentium adipisci similique
-                ipsam, ea ad veritatis quae ipsum. Assumenda esse nisi numquam
-                aliquid iusto? Fugit repellendus soluta cumque velit nisi
-                praesentium ab sed sequi!
+                liberndus soluta cumque velit nisi praesentium ab sed sequi!
               </p>
 
               <h4 class="fs-5 mt-5">I Professionalize in</h4>
@@ -248,9 +249,12 @@
       </section>
 
       <!-- ******************Services Section******************** -->
-      <section class="services-section mb-5" id="servicesSection">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="text-center mb-4 fs-2">SERVICES</h2>
+      <section
+        class="services-section mb-5 mt-5 cont max-width"
+        id="servicesSection"
+      >
+        <div class="max-wih" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="text-center mb-4 section-title">SERVICES</h2>
           <div
             class="row gy-5 gx-4 mb-5 mt-2 top-container"
             id="servicesContainer"
@@ -259,9 +263,9 @@
       </section>
 
       <!-- ******************Contact Section******************** -->
-      <section class="contact-section" id="contactSection">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="text-center mb-5 fs-2">CONTACT ME</h2>
+      <section class="contact-section cont max-width" id="contactSection">
+        <div style="width: 90%" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="text-center mb-5 section-title">CONTACT ME</h2>
           <form action="#" class="contact-form" id="contactForm">
             <div class="row gy-4 gx-3 justify-content-center">
               <div class="col-md-6">
@@ -340,7 +344,14 @@
       </div>
 
       <p class="praise d-flex align-items-center">
-        Built by <span class="me ms-1">Dubem</span>
+        Built with 💚 by
+        <a
+          href="https://dubem-portfolio-beryl.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="me ms-1"
+          >Dubem
+        </a>
       </p>
     </footer>
 

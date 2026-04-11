@@ -12,6 +12,12 @@ if (body.id === "homePage") {
   // General Scroll function***************************
 
   window.addEventListener("scroll", () => {
+    const isScroll = window.scrollY > 0;
+
+    if (navHeader.classList.contains("bg") !== isScroll) {
+      navHeader.classList.toggle("bg");
+    }
+
     // Navbar-Scroll-Listener**********
     const navBottomPoint = navHeader.offsetTop + navHeader.offsetHeight;
     const titleTop = heroTitle.offsetTop;
@@ -49,40 +55,45 @@ if (body.id === "homePage") {
   const navMenuToggler = document.getElementById("navMenuToggler");
   const overlay = document.getElementById("overlay");
   toggleBtn.addEventListener("click", () => {
-    if (toggleBtn.classList.contains("bi-list")) {
-      toggleBtn.classList.remove("bi-list");
-      toggleBtn.classList.add("bi-x");
+    if (toggleBtn.src.includes("hamburger.png")) {
+      toggleBtn.src = "./photos/icons/closethin.png";
+
       overlay.classList.add("activate");
       navMenuToggler.classList.toggle("active");
       body.classList.add("scroll-lock");
     } else {
-      toggleBtn.classList.remove("bi-x");
-      toggleBtn.classList.add("bi-list");
+      toggleBtn.src = "./photos/icons/hamburger.png";
       navMenuToggler.classList.toggle("active");
       overlay.classList.remove("activate");
       body.classList.remove("scroll-lock");
     }
   });
 
+  const heroImgBg = document.getElementById("heroImgBg");
+  setInterval(() => {
+    heroImgBg.classList.toggle("first-img");
+    heroImgBg.classList.toggle("second-img");
+  }, 7000);
+
   // Gallery Section**********************************
   // Gallery Section**********************************
 
   const images = [
-    "photos/gallery-1.jpg",
-    "photos/gallery-2.jpg",
-    "photos/gallery-3.jpg",
-    "photos/gallery-4.jpg",
-    "photos/gallery-5.jpg",
-    "photos/gallery-6.jpg",
-    "photos/gallery-7.jpg",
-    "photos/gallery-8.jpg",
+    "photos/uk_babe.jpg",
+    "photos/purple_couple.jpg",
+    "photos/coperate_babe.jpg",
+    "photos/uti_pic.jpg",
+    "photos/uu.jpg",
+    "photos/sworv_couple.jpg",
+    "photos/dark_blue_groom.jpg",
+    "photos/rainbow_beenie.jpg",
   ];
 
   let num = 1;
 
   for (let img of images) {
     const col = document.createElement("div");
-    col.classList.add("col-xl-3", "col-lg-4", "col-md-6", "custom-col");
+    col.classList.add("col-xl-3", "col-lg-4", "col-6", "custom-col");
 
     col.innerHTML = `
 
@@ -157,7 +168,7 @@ alt="gallery-item-${num}"
       "col",
 
       "col-4",
-      "service-wrapper"
+      "service-wrapper",
     );
 
     col.innerHTML = `
