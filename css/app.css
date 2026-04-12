@@ -277,9 +277,8 @@ main {
 }
 
 .hero-img-wrapper {
-  background-size: cover;
   width: 100%;
-  background-position: center;
+  position: relative;
   min-height: 100vh;
   z-index: 1;
   padding-bottom: 150px;
@@ -287,12 +286,26 @@ main {
   transition: background-image 0.3s ease-in-out;
 }
 
-.hero-img-wrapper.first-img {
+.og-hero-overlay {
+  inset: 0;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
   background-image: url("https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008034/happy_family.jpg");
 }
 
-.hero-img-wrapper.second-img {
+.hero-overlay {
+  inset: 0;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
   background-image: url("../photos/serious_family.jpg");
+  transition: opacity 0.2s ease-in-out;
+}
+
+.hero-overlay.active {
+  opacity: 1;
 }
 
 .hero-img {
@@ -315,6 +328,8 @@ main {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 
 .title {
@@ -345,6 +360,8 @@ main {
 }
 .ps {
   margin-top: 20px !important;
+  z-index: 1;
+  position: relative;
 }
 
 .ps p:first-child {
@@ -443,11 +460,11 @@ main {
 }
 
 .about-section .about-me-container .my-description {
-  font-size: clamp(15px, 1.5vw, 18px) !important;
+  font-size: clamp(16px, 1.5vw, 18px) !important;
 }
 
 .about-section .about-me-container .services-container p {
-  font-size: clamp(14px, 1.5vw, 15px) !important;
+  font-size: 15px !important;
 }
 .save-btn {
   color: var(--special-green-color);

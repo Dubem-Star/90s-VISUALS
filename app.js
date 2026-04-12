@@ -71,8 +71,7 @@ if (body.id === "homePage") {
 
   const heroImgBg = document.getElementById("heroImgBg");
   setInterval(() => {
-    heroImgBg.classList.toggle("first-img");
-    heroImgBg.classList.toggle("second-img");
+    heroImgBg.classList.toggle("active");
   }, 7000);
 
   // Gallery Section**********************************
