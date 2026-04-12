@@ -79,14 +79,14 @@ if (body.id === "homePage") {
   // Gallery Section**********************************
 
   const images = [
-    "photos/uk_babe.jpg",
-    "photos/purple_couple.jpg",
-    "photos/coperate_babe.jpg",
-    "photos/uti_pic.jpg",
-    "photos/uu.jpg",
-    "photos/sworv_couple.jpg",
-    "photos/dark_blue_groom.jpg",
-    "photos/rainbow_beenie.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008042/uk_babe.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008034/purple_couple.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008033/coperate_babe.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008042/uti_pic.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008042/uu.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008040/sworv_couple.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008031/dark_blue_groom.jpg",
+    "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008036/rainbow_beenie.jpg",
   ];
 
   let num = 1;

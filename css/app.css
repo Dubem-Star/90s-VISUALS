@@ -288,7 +288,7 @@ main {
 }
 
 .hero-img-wrapper.first-img {
-  background-image: url("../photos/happy_family.jpg");
+  background-image: url("https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008034/happy_family.jpg");
 }
 
 .hero-img-wrapper.second-img {
