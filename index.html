@@ -16,11 +16,18 @@
       rel="apple-touch-icon"
     />
 
-    <!-- Fonts -->
+    <!--Montserrat Font -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -57,14 +64,21 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
 
-  <body id="homePage" class="home-page">
-    <div class="overlay" id="overlay"></div>
+  <body
+    id="homePage"
+    class="home-page position-relative overflow-x-hidden overflow-y-auto d-flex flex-column"
+  >
+    <div class="overlay opacity-0 invisible position-fixed" id="overlay"></div>
 
-    <img
-      src="./photos/icons/hamburger.png"
-      class="mobile-nav-toggle d-none"
-      id="toggleBtn"
-    />
+    <div class="mobile-nav-toggle-container" id="toggleBtnCont">
+      <img
+        src="./photos/icons/hamburger.png"
+        class="mobile-nav-toggle d-none"
+        id="toggleBtn"
+        data-aos="fade-left"
+        data-aos-delay="100"
+      />
+    </div>
 
     <div class="nav-menu-toggler" id="navMenuToggler">
       <nav class="nav-menu" id="navMenu">
@@ -73,7 +87,7 @@
           <li class="dropdown-mobile">
             <a href="#gallerySection"
               ><span>Gallery</span>
-              <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
             </a>
           </li>
           <li><a href="#aboutSection">About</a></li>
@@ -82,15 +96,32 @@
         </ul>
       </nav>
     </div>
+    <div
+      class="dropdown-box position-fixed opacity-0 invisible"
+      id="dropdownUl"
+    >
+      <ul class="dropdown-ul d-flex flex-column glass-background pt-5">
+        <li><a href="#">Unions</a></li>
+        <li><a href="#">Portraits</a></li>
+        <li><a href="#">Family</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+    </div>
 
     <header
-      class="header d-flex fixed-top align-items-center w-100"
+      class="header d-flex fixed-top align-items-center justify-content-center w-100 m-auto"
       id="navHeader"
     >
       <div
         class="navbar-container container-fluid position-relative d-flex align-items-center justify-content-between max-width"
       >
-        <a href="index.html" class="logo text-decoration-none">
+        <a
+          href="index.html"
+          class="logo text-decoration-none"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
           <img
             src="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006852/90_s_favicon_2.png"
             class="real"
@@ -101,17 +132,21 @@
             class="fake"
             alt="brand-logo"
           />
-          <!-- <h1 class="sitename">90's</h1> -->
         </a>
 
-        <nav class="nav-menu" id="navMenu">
+        <nav
+          class="nav-menu"
+          id="navMenu"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
           <ul>
             <li><a href="#heroSection" class="nav-link">Home</a></li>
 
-            <li class="dropdown">
-              <a href="#gallerySection" class="nav-link"
+            <li class="position-relative dropdown" id="galleryNav">
+              <a href="#gallerySection" class="nav-link galle"
                 ><span>Gallery</span>
-                <!-- <i class="bi bi-chevron-down toggle-dropdown"></i> -->
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
             </li>
             <li><a href="#aboutSection" class="nav-link">About</a></li>
@@ -124,7 +159,11 @@
           </ul>
         </nav>
 
-        <div class="header-social-links">
+        <div
+          class="header-social-links d-flex align-items-center justify-content-end"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
           <a href="#" class="social-link twitter">
             <i class="bi bi-twitter-x"></i>
           </a>
@@ -153,7 +192,12 @@
           <div class="og-hero-overlay"></div>
           <div class="hero-overlay" id="heroImgBg"></div>
 
-          <div class="container tit" style="margin-top: 70px">
+          <div
+            class="container tit"
+            style="margin-top: 70px"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             <div class="row justify-content-center">
               <div class="col-md-12 text-center">
                 <h2 id="heroTitle" class="hero-title">
@@ -223,15 +267,12 @@
               <p class="mt-4 my-description">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error,
                 repudiandae voluptatem cum esse cupiditate incidunt, nihil
-                dolorem nisi tempora beatae, dolore dolores in assumenda quis
-                cumque rerum veritatis officiis aperiam! Odit alias, consectetur
-                ipsum minus veritatis neque ratione fugiat aliquam, <br />
+                dolorem nisi tempora beatae, ! Odit alias, consectetur ipsum
+                minus veritatis neque ratione fugiat aliquam, <br />
                 <br />
                 sit sequi repudiandae quas enim quasi. Corporis, ducimus.
                 Asperiores molestias animi esse, pariatur sunt corrupti tota
-                Numquam reprehenderit dolor illo nihil, quidem consequuntur!
-                Praesentium mollitia alias corrupti, repellat quos accusamus
-                liberndus soluta cumque velit nisi praesentium ab sed sequi!
+                Numquam re velit nisi praesentium ab sed sequi!
               </p>
 
               <h4 class="fs-5 mt-5">I Professionalize in</h4>
@@ -266,9 +307,9 @@
             </div>
             <div class="col-lg-6 my-image-container mt-3 text-center">
               <img
-                src="photos/my_pic.PNG"
+                src="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458728/my_pic.png"
                 alt="my-pic"
-                class="my-image img-fluid"
+                class="my-image img-fluid rounded-4"
               />
             </div>
           </div>
@@ -277,13 +318,17 @@
 
       <!-- ******************Services Section******************** -->
       <section
-        class="services-section mb-5 mt-5 cont max-width"
+        class="services-section mb-5 cont max-width"
         id="servicesSection"
       >
         <div class="max-wih" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="text-center mb-4 section-title">SERVICES</h2>
+          <h2 class="text-center m-0 section-title">SERVICES</h2>
+
+          <p class="text-center mb-5 mt-0 section-subtext">
+            What i can do for you
+          </p>
           <div
-            class="row gy-5 gx-4 mb-5 mt-2 top-container"
+            class="row mb-5 mt-2 g-3 top-container"
             id="servicesContainer"
           ></div>
         </div>

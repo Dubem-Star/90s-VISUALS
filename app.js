@@ -6,16 +6,78 @@ const sections = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 const servicesContainer = document.getElementById("servicesContainer");
 const contactForm = document.getElementById("contactForm");
+const heroSection = document.getElementById("heroSection");
+const toggleBtn = document.getElementById("toggleBtn");
+const toggleBtnCont = document.getElementById("toggleBtnCont");
+const navMenuToggler = document.getElementById("navMenuToggler");
+const overlay = document.getElementById("overlay");
+const galleryNav = document.getElementById("galleryNav");
+const dropdownUl = document.getElementById("dropdownUl");
 
 if (body.id === "homePage") {
+  // galleryNav.addEventListener("mouseenter", () => {
+  //   dropdownUl.classList.add("drop");
+  // });
+
+  // galleryNav.addEventListener("mouseleave", () => {
+  //   dropdownUl.classList.remove("drop");
+  // });
+
+  // *************************************************
+
+  let dropdownTimer;
+
+  const showDropdown = () => {
+    clearTimeout(dropdownTimer);
+    dropdownUl.classList.add("drop");
+  };
+
+  const hideDropdown = () => {
+    // Give the user 100ms to "land" on the dropdown box
+    dropdownTimer = setTimeout(() => {
+      dropdownUl.classList.remove("drop");
+    }, 100);
+  };
+
+  // 1. Listen to the Nav Link
+  galleryNav.addEventListener("mouseenter", showDropdown);
+  galleryNav.addEventListener("mouseleave", hideDropdown);
+
+  // 2. Listen to the Dropdown Box itself (CRITICAL)
+  // This keeps it open when the mouse is moving inside the menu
+  dropdownUl.addEventListener("mouseenter", showDropdown);
+  dropdownUl.addEventListener("mouseleave", hideDropdown);
+  // ********************************************************
+
   // General Scroll function***************************
   // General Scroll function***************************
+  let lastScrollY = scrollY;
 
   window.addEventListener("scroll", () => {
+    // Navbar-Scroll-Hider**********
+
+    let currentScrollY = window.scrollY;
+
+    if (window.scrollY > heroSection.offsetHeight) {
+      if (window.scrollY > lastScrollY) {
+        navHeader.classList.add("hide-navbar");
+        toggleBtnCont.classList.add("hide-navbar");
+      } else {
+        navHeader.classList.remove("hide-navbar"); // 👈🏾show navbar
+        toggleBtnCont.classList.remove("hide-navbar");
+      }
+    } else {
+      navHeader.classList.remove("hide-navbar"); // 👈🏾show navbar
+    }
+
+    lastScrollY = currentScrollY;
+    // lastScrollY = currentScrollY;
+
+    // Navbar-Background-Transition**********
     const isScroll = window.scrollY > 0;
 
-    if (navHeader.classList.contains("bg") !== isScroll) {
-      navHeader.classList.toggle("bg");
+    if (navHeader.classList.contains("glass-background") !== isScroll) {
+      navHeader.classList.toggle("glass-background");
     }
 
     // Navbar-Scroll-Listener**********
@@ -51,9 +113,6 @@ if (body.id === "homePage") {
   // Hamburger Toggler**********************************
   // Hamburger Toggler**********************************
 
-  const toggleBtn = document.getElementById("toggleBtn");
-  const navMenuToggler = document.getElementById("navMenuToggler");
-  const overlay = document.getElementById("overlay");
   toggleBtn.addEventListener("click", () => {
     if (toggleBtn.src.includes("hamburger.png")) {
       toggleBtn.src = "./photos/icons/closethin.png";
@@ -119,64 +178,67 @@ alt="gallery-item-${num}"
 
   const services = [
     {
-      name: "Fashion Photography",
-      icon: "photos/icons/fashion-icon.png",
+      name: "Weddings & Unions",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458356/union.jpg",
       description:
-        "Capture style and elegance through stunning visuals. Our fashion photography highlights clothing, accessories, and individuality.",
+        "Cinematic storytelling for your most intimate and grand celebrations.",
     },
 
     {
-      name: "Wedding Photography",
-      icon: "photos/icons/marriage-icon.png",
+      name: "Private Portraits",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458394/northen_babe.jpg",
       description:
-        "We preserve your special day in timeless images filled with emotion, laughter, and love.",
+        "Personalized sessions that capture your character with editorial polish.",
     },
 
     {
-      name: "Product Photography",
-      icon: "photos/icons/product-icon.png",
+      name: "Commercial Branding",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458365/branding.jpg",
       description:
-        "Highlight your brand with crisp, detailed, and visually appealing product images that capture quality and drive customer attention.",
+        "High-end visual assets designed to elevate your personal or business brand.",
     },
 
     {
-      name: "Portrait Photography",
-      icon: "photos/icons/portrait-icon.png",
+      name: "Social & Nightlife",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776429365/night_life.jpg",
       description:
-        "Classic, clean, and full of character — our portraits capture your essence in its most natural and expressive form.",
+        "Capturing the raw energy, mood, and authentic vibes of the city after dark.",
     },
 
     {
-      name: "Sport Photography",
-      icon: "photos/icons/sport-icon.png",
+      name: "Editorial & Fashion",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458382/outdoor.jpg",
       description:
-        "Freeze the action and intensity of the game with sharp, dynamic sports imagery. We capture the energy, motion, and victory in every frame.",
+        "High-concept imagery focused on style, movement, and dramatic lighting.",
     },
 
     {
-      name: "Birthday Photography",
-      icon: "photos/icons/birthday-icon.png",
+      name: "Cinematography",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776414947/music_vid.png",
       description:
-        "Make your celebrations unforgettable with vibrant, joyful birthday photos.",
+        "Bringing sound to life through motion and storytelling. From music videos to brand films.",
     },
   ];
 
   for (let service of services) {
     const col = document.createElement("div");
     col.classList.add(
-      "col",
-
-      "col-4",
+      "col-lg-4",
+      "col-12",
+      "col-md-6",
+      "h-sm-50",
       "service-wrapper",
     );
+    // col.dataset.aos = "fade-up";
+    // col.dataset.aosDelay = "20";
 
     col.innerHTML = `
     <a href="#contactSection" class="text-decoration-none text-reset">
- <div class = "service-container"> 
-  <div class = "icon-container "> 
+ <div class = "service-container  overflow-hidden"> 
+  
   
   <img src= "${service.icon}" class="icon-img"/>
-  </div>
+
 
   <h2 class = "service-title text-decoration-none">${service.name}</h2>
 
