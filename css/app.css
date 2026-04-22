@@ -122,7 +122,7 @@ body {
 .logo {
   position: relative;
   width: 15%;
-
+  outline: none !important;
   padding: 0 10px;
 }
 
@@ -161,14 +161,6 @@ body {
   margin: 10px;
 }
 
-.galle.red {
-  color: red;
-}
-
-/* .nav-link:hover {
-  color: red !important;
-} */
-
 .nav-menu ul li {
   list-style: none;
 }
@@ -183,43 +175,32 @@ body {
   transition: color 0.3s ease;
 }
 
-.dropdown-box {
-  top: 30px;
+.dropdown-ul {
+  top: 80px;
   left: 35%;
   z-index: 9999;
-  transition:
-    opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out,
-    top 0.3s ease-in-out;
-  /* pointer-events: none !important; */
-}
-
-.dropdown-box.drop {
-  opacity: 1 !important;
-  visibility: visible !important;
-  /* pointer-events: auto !important; */
-}
-
-.dropdown-ul {
-  gap: 20px;
   padding: 20px 70px 20px 20px;
   border-radius: 4px;
   list-style: none;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.5s ease-in-out;
+}
+
+.dropdown-ul.drop {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .dropdown-ul li a {
-  font-size: 16px !important;
+  font-size: 15px !important;
   text-decoration: none;
   color: inherit;
 }
 
 .header-social-links {
-  display: flex;
   font-size: 16px;
-  gap: 25px;
   width: 15%;
-  padding-right: 20px;
-  height: auto;
 }
 
 .header-social-links a {
@@ -238,9 +219,6 @@ main {
 }
 
 .hero-img-wrapper {
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
   z-index: 1;
   padding-bottom: 150px;
   padding-top: 150px;
@@ -249,7 +227,6 @@ main {
 
 .og-hero-overlay {
   inset: 0;
-  position: absolute;
   background-position: center;
   background-size: cover;
   background-image: url("https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458351/serious_family.jpg");
@@ -257,16 +234,14 @@ main {
 
 .hero-overlay {
   inset: 0;
-  position: absolute;
   background-position: center;
   background-size: cover;
-  opacity: 0;
   background-image: url("https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008034/happy_family.jpg");
   transition: opacity 0.2s ease-in-out;
 }
 
 .hero-overlay.active {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .hero-img {
@@ -285,17 +260,12 @@ main {
   font-size: clamp(20px, 4.5vw, 70px);
   font-family: var(--nav-font);
   gap: 5px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
-  position: relative;
 }
 
 .title {
   display: flex;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 
 .hero-title .highlight {
@@ -365,6 +335,7 @@ main {
 .section-subtext {
   font-size: clamp(16px, 1.3vw, 20px);
   color: #27a776;
+  margin-bottom: 20px !important;
 }
 
 .gallery-item {
@@ -727,7 +698,7 @@ main {
 
   .abt-cont .section-subtext {
     order: 2;
-    margin-bottom: 20px !important;
+    /* margin-bottom: 20px !important; */
   }
 
   .abt-cont .my-image-container {
@@ -762,7 +733,7 @@ main {
 
 @media (max-width: 950px) {
   .header-social-links {
-    display: none;
+    display: none !important;
   }
 
   .social-link:last-child {

@@ -15,14 +15,6 @@ const galleryNav = document.getElementById("galleryNav");
 const dropdownUl = document.getElementById("dropdownUl");
 
 if (body.id === "homePage") {
-  // galleryNav.addEventListener("mouseenter", () => {
-  //   dropdownUl.classList.add("drop");
-  // });
-
-  // galleryNav.addEventListener("mouseleave", () => {
-  //   dropdownUl.classList.remove("drop");
-  // });
-
   // *************************************************
 
   let dropdownTimer;
@@ -63,15 +55,14 @@ if (body.id === "homePage") {
         navHeader.classList.add("hide-navbar");
         toggleBtnCont.classList.add("hide-navbar");
       } else {
-        navHeader.classList.remove("hide-navbar"); // 👈🏾show navbar
+        navHeader.classList.remove("hide-navbar"); //
         toggleBtnCont.classList.remove("hide-navbar");
       }
     } else {
-      navHeader.classList.remove("hide-navbar"); // 👈🏾show navbar
+      navHeader.classList.remove("hide-navbar"); //
     }
 
     lastScrollY = currentScrollY;
-    // lastScrollY = currentScrollY;
 
     // Navbar-Background-Transition**********
     const isScroll = window.scrollY > 0;
@@ -179,42 +170,42 @@ alt="gallery-item-${num}"
   const services = [
     {
       name: "Weddings & Unions",
-      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458356/union.jpg",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto,w_840,h_700,c_fill,g_auto/v1776458356/union.jpg",
       description:
         "Cinematic storytelling for your most intimate and grand celebrations.",
     },
 
     {
       name: "Private Portraits",
-      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458394/northen_babe.jpg",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto,w_840,h_700,c_fill,g_auto/v1776458394/northen_babe.jpg",
       description:
         "Personalized sessions that capture your character with editorial polish.",
     },
 
     {
       name: "Commercial Branding",
-      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458365/branding.jpg",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto,w_840,h_700,c_fill,g_auto/v1776458365/branding.jpg",
       description:
         "High-end visual assets designed to elevate your personal or business brand.",
     },
 
     {
       name: "Social & Nightlife",
-      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776429365/night_life.jpg",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto,w_840,h_700,c_fill,g_auto/v1776429365/night_life.jpg",
       description:
         "Capturing the raw energy, mood, and authentic vibes of the city after dark.",
     },
 
     {
       name: "Editorial & Fashion",
-      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776458382/outdoor.jpg",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto,w_840,h_700,c_fill,g_auto/v1776458382/outdoor.jpg",
       description:
         "High-concept imagery focused on style, movement, and dramatic lighting.",
     },
 
     {
       name: "Cinematography",
-      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776414947/music_vid.png",
+      icon: "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto,w_840,h_700,c_fill,g_auto/v1776414947/music_vid.png",
       description:
         "Bringing sound to life through motion and storytelling. From music videos to brand films.",
     },

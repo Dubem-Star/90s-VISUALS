@@ -96,18 +96,17 @@
         </ul>
       </nav>
     </div>
-    <div
-      class="dropdown-box position-fixed opacity-0 invisible"
+
+    <ul
+      class="dropdown-ul d-flex flex-column invisible opacity-0 position-fixed glass-background gap-3"
       id="dropdownUl"
     >
-      <ul class="dropdown-ul d-flex flex-column glass-background pt-5">
-        <li><a href="#">Unions</a></li>
-        <li><a href="#">Portraits</a></li>
-        <li><a href="#">Family</a></li>
-        <li><a href="#">Fashion</a></li>
-        <li><a href="#">Videos</a></li>
-      </ul>
-    </div>
+      <li><a href="#">Unions</a></li>
+      <li><a href="#">Portraits</a></li>
+      <li><a href="#">Family</a></li>
+      <li><a href="#">Fashion</a></li>
+      <li><a href="#">Videos</a></li>
+    </ul>
 
     <header
       class="header d-flex fixed-top align-items-center justify-content-center w-100 m-auto"
@@ -160,7 +159,7 @@
         </nav>
 
         <div
-          class="header-social-links d-flex align-items-center justify-content-end"
+          class="header-social-links d-flex align-items-center justify-content-end gap-4 pe-3"
           data-aos="fade-down"
           data-aos-delay="100"
         >
@@ -187,10 +186,13 @@
 
       <section class="hero hero-section mb-5" id="heroSection">
         <div
-          class="hero-img-wrapper first-img d-flex align-items-center flex-column"
+          class="hero-img-wrapper first-img d-flex align-items-center flex-column position-relative w-100 min-vh-100"
         >
-          <div class="og-hero-overlay"></div>
-          <div class="hero-overlay" id="heroImgBg"></div>
+          <div class="og-hero-overlay position-absolute"></div>
+          <div
+            class="hero-overlay position-absolute opacity-0"
+            id="heroImgBg"
+          ></div>
 
           <div
             class="container tit"
@@ -200,7 +202,10 @@
           >
             <div class="row justify-content-center">
               <div class="col-md-12 text-center">
-                <h2 id="heroTitle" class="hero-title">
+                <h2
+                  id="heroTitle"
+                  class="hero-title d-flex align-items-center justify-content-center position-relative flex-nowrap"
+                >
                   <span class="text-white title">I CREATE.</span>
                   <span class="highlight title">I CAPTURE.</span>
                   <span class="title">I CONNECT.</span>
@@ -234,7 +239,7 @@
             <h2 class="gallery-title text-center mb-0 section-title">
               GALLERY
             </h2>
-            <p class="text-center mb-4 mt-0 section-subtext">
+            <p class="text-center mt-0 section-subtext">
               Selected pieces from my collection
             </p>
           </div>
@@ -256,23 +261,33 @@
         <div class="wrapper abt-wih">
           <div class="row justify-content-center abt-cont">
             <h2 class="text-center section-title mb-0">ABOUT ME</h2>
-            <p class="text-center mb-5 mt-0 section-subtext">
+            <p class="text-center mt-0 section-subtext">
               The eye behind the lens
             </p>
             <div class="col-lg-6 about-me-container mt-3">
               <h4 class="fs-4">
-                Hi, I'm <span class="green-name">Seyi Oloye</span>
+                Hi, I'm <span class="green-name">David Ogunleye</span>
               </h4>
 
               <p class="mt-4 my-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error,
-                repudiandae voluptatem cum esse cupiditate incidunt, nihil
-                dolorem nisi tempora beatae, ! Odit alias, consectetur ipsum
-                minus veritatis neque ratione fugiat aliquam, <br />
+                I’m a professional photographer and visual storyteller based in
+                Scotland, working under Justlink 90’s Visuals. I create visuals
+                that go beyond the ordinary blending creativity, culture, and
+                emotion to produce work that feels authentic and distinctive.
                 <br />
-                sit sequi repudiandae quas enim quasi. Corporis, ducimus.
-                Asperiores molestias animi esse, pariatur sunt corrupti tota
-                Numquam re velit nisi praesentium ab sed sequi!
+                <br />
+                I’m a versatile creative, working across multiple styles
+                including lifestyle, fashion, portraits, and events. Rather than
+                limiting myself to one niche, I adapt my approach to suit each
+                project, ensuring every visual tells a unique story.
+
+                <br />
+                <br />
+                My work is rooted in storytelling capturing moments and
+                transforming them into powerful narratives through both
+                photography and video. From events to music videos and creative
+                concepts, I bring ideas to life in a way that’s fresh,
+                cinematic, and intentionally different from the norm.
               </p>
 
               <h4 class="fs-5 mt-5">I Professionalize in</h4>
@@ -324,9 +339,7 @@
         <div class="max-wih" data-aos="fade-up" data-aos-delay="100">
           <h2 class="text-center m-0 section-title">SERVICES</h2>
 
-          <p class="text-center mb-5 mt-0 section-subtext">
-            What i can do for you
-          </p>
+          <p class="text-center mt-0 section-subtext">What i can do for you</p>
           <div
             class="row mb-5 mt-2 g-3 top-container"
             id="servicesContainer"
@@ -405,7 +418,7 @@
       <p
         class="copyright text-align-center text-light d-flex align-items-center"
       >
-        © 2025 90's Visuals. All Rights Reserved
+        © 2026 90's Visuals. All Rights Reserved
       </p>
 
       <div class="footer-social-links d-flex justify-content-center">
