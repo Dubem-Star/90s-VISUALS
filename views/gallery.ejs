@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006852/90_s_favicon.png"
+      type="image/png"
+    />
+
+    <!--Montserrat Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Bootstrap CSS CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS (Animate on Scroll) CSS CDN Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- GLightbox CSS CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <!-- Swiper CSS CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/app2.css" />
+  </head>
+  <body
+    class="gallery-page position-relative overflow-x-hidden overflow-y-auto d-flex flex-column min-vh-100"
+    id="galleryPage"
+  >
+    <%- include('partials/navbar') %>
+
+    <main style="margin-top: 180px">
+      <div class="gallery-page-cont container-fluid">
+        <div class="row gy-4 justify-content-center" id="galleryPageCont">
+          <h1
+            class="category-title text-center text-uppercase mb-sm-5 mb-4 mt-0"
+            id="catTitle"
+          ></h1>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <!-- CDN JS Files -->
+    <!--- BootstrapJS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AOSJS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GLIightboxJS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      // const lightbox = GLightbox();
+    </script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

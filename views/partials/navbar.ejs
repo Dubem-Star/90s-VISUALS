@@ -1,0 +1,142 @@
+<!-- <body id="homePage"> -->
+<div class="overlay opacity-0 invisible position-fixed" id="overlay"></div>
+
+<div class="mobile-nav-toggle-container" id="toggleBtnCont">
+  <img
+    src="/photos/icons/hamburger.png"
+    class="mobile-nav-toggle d-none"
+    id="toggleBtn"
+    data-aos="fade-left"
+    data-aos-delay="100"
+  />
+</div>
+<!-- *****************NAV MOBILE MENU*************************** -->
+<!-- *****************NAV MOBILE MENU*************************** -->
+<div class="nav-menu-toggler position-fixed h-100" id="navMenuToggler">
+  <div
+    class="mobile-nav-toggle-container position-absolute close"
+    id="toggleBtnCont"
+  >
+    <img
+      src="/photos/icons/closethin.png"
+      class="mobile-nav-toggle"
+      id="closeBtn"
+    />
+  </div>
+
+  <nav class="nav-menu d-flex w-100 h-100 glass-background" id="navMenu">
+    <ul
+      class="d-flex flex-column w-100 h-100 justify-content-start align-items-start p-1"
+    >
+      <li><a href="/#heroSection" class="home">Home</a></li>
+      <li class="dropdown-mobile d-flex flex-column w-100">
+        <div>
+          <a href="/#gallerySection"><span>Gallery</span> </a>
+          <i
+            class="bi bi-chevron-down ms-1 toggle-dropdown d-inline-flex align-items-center justify-content-center"
+            id="mobileGalleryNav"
+          ></i>
+        </div>
+
+        <ul
+          class="dropdown-ul mobile-gallery-dropdown w-75 d-flex flex-column gap-3 overflow-hidden text-center"
+          id="dropdownMobile"
+        >
+          <li><a href="/gallery/all?id=0">All</a></li>
+          <li><a href="/gallery/unions?id=1">Unions</a></li>
+          <li><a href="/gallery/portaits?id=2">Portraits</a></li>
+          <li><a href="/gallery/family?id=3">Family</a></li>
+          <li><a href="/gallery/fashion?id=4">Fashion</a></li>
+          <li><a href="/gallery/videos?id=5">Videos</a></li>
+        </ul>
+      </li>
+      <li><a href="/#aboutSection">About</a></li>
+      <li><a href="/#servicesSection"> Services</a></li>
+      <li><a href="/#contactSection">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- *********************************************************** -->
+<ul
+  class="dropdown-ul d-flex flex-column invisible opacity-0 position-fixed glass-background gap-3"
+  id="dropdownUl"
+>
+  <li><a href="/gallery/all?id=0">All</a></li>
+  <li><a href="/gallery/unions?id=1">Unions</a></li>
+  <li><a href="/gallery/portaits?id=2">Portraits</a></li>
+  <li><a href="/gallery/family?id=3">Family</a></li>
+  <li><a href="/gallery/fashion?id=4">Fashion</a></li>
+  <li><a href="/gallery/videos?id=5">Videos</a></li>
+</ul>
+
+<header
+  class="header d-flex fixed-top align-items-center justify-content-center w-100 m-auto"
+  id="navHeader"
+>
+  <div
+    class="navbar-container d-flex flex-nowrap justify-content-between align-items-center w-100 container-fluid position-relative d-flex align-items-center justify-content-between max-width"
+  >
+    <a
+      href="/"
+      class="logo text-decoration-none position-relative"
+      data-aos="fade-right"
+      data-aos-delay="100"
+    >
+      <img
+        src="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006852/90_s_favicon_2.png"
+        class="real position-absolute"
+        alt="brand-logo"
+      />
+      <img
+        src="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006853/90_s_favicon.png"
+        class="fake invisible"
+        alt="brand-logo"
+      />
+    </a>
+
+    <nav
+      class="nav-menu nahbar d-flex align-items-center justify-content-center"
+      id="navMenu"
+      data-aos="fade-down"
+      data-aos-delay="100"
+    >
+      <ul class="d-flex align-items-center justify-content-center gap-5 p-1 m">
+        <li><a href="/#heroSection" class="nav-link">Home</a></li>
+
+        <li class="position-relative dropdown" id="galleryNav">
+          <a href="/#gallerySection"
+            ><span>Gallery</span>
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+        </li>
+        <li><a href="/#aboutSection" class="nav-link">About</a></li>
+        <li>
+          <a href="/#servicesSection" class="nav-link"> Services</a>
+        </li>
+        <li>
+          <a href="/#contactSection" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="header-social-links d-flex align-items-center justify-content-end gap-4 pe-3"
+      data-aos="fade-down"
+      data-aos-delay="100"
+    >
+      <a href="#" class="social-link twitter">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="#" class="social-link facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="#" class="social-link instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="#" class="social-link linkedin">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</header>

@@ -5,24 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>90s Visuals</title>
 
-    <!-- Favicons -->
     <link
-      href="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006853/90_s_favicon.png"
-      type="image/png"
       rel="icon"
-    />
-    <link
-      href="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006853/90_s_favicon.png"
-      rel="apple-touch-icon"
+      href="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006852/90_s_favicon.png"
+      type="image/png"
     />
 
     <!--Montserrat Font -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,118 +55,9 @@
 
   <body
     id="homePage"
-    class="home-page position-relative overflow-x-hidden overflow-y-auto d-flex flex-column"
+    class="position-relative overflow-x-hidden overflow-y-auto d-flex flex-column"
   >
-    <div class="overlay opacity-0 invisible position-fixed" id="overlay"></div>
-
-    <div class="mobile-nav-toggle-container" id="toggleBtnCont">
-      <img
-        src="./photos/icons/hamburger.png"
-        class="mobile-nav-toggle d-none"
-        id="toggleBtn"
-        data-aos="fade-left"
-        data-aos-delay="100"
-      />
-    </div>
-
-    <div class="nav-menu-toggler" id="navMenuToggler">
-      <nav class="nav-menu" id="navMenu">
-        <ul>
-          <li><a href="#heroSection" class="home">Home</a></li>
-          <li class="dropdown-mobile">
-            <a href="#gallerySection"
-              ><span>Gallery</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i>
-            </a>
-          </li>
-          <li><a href="#aboutSection">About</a></li>
-          <li><a href="#servicesSection"> Services</a></li>
-          <li><a href="#contactSection">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <ul
-      class="dropdown-ul d-flex flex-column invisible opacity-0 position-fixed glass-background gap-3"
-      id="dropdownUl"
-    >
-      <li><a href="#">Unions</a></li>
-      <li><a href="#">Portraits</a></li>
-      <li><a href="#">Family</a></li>
-      <li><a href="#">Fashion</a></li>
-      <li><a href="#">Videos</a></li>
-    </ul>
-
-    <header
-      class="header d-flex fixed-top align-items-center justify-content-center w-100 m-auto"
-      id="navHeader"
-    >
-      <div
-        class="navbar-container container-fluid position-relative d-flex align-items-center justify-content-between max-width"
-      >
-        <a
-          href="index.html"
-          class="logo text-decoration-none"
-          data-aos="fade-right"
-          data-aos-delay="100"
-        >
-          <img
-            src="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006852/90_s_favicon_2.png"
-            class="real"
-            alt="brand-logo"
-          />
-          <img
-            src="https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776006853/90_s_favicon.png"
-            class="fake"
-            alt="brand-logo"
-          />
-        </a>
-
-        <nav
-          class="nav-menu"
-          id="navMenu"
-          data-aos="fade-down"
-          data-aos-delay="100"
-        >
-          <ul>
-            <li><a href="#heroSection" class="nav-link">Home</a></li>
-
-            <li class="position-relative dropdown" id="galleryNav">
-              <a href="#gallerySection" class="nav-link galle"
-                ><span>Gallery</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
-            </li>
-            <li><a href="#aboutSection" class="nav-link">About</a></li>
-            <li>
-              <a href="#servicesSection" class="nav-link"> Services</a>
-            </li>
-            <li>
-              <a href="#contactSection" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div
-          class="header-social-links d-flex align-items-center justify-content-end gap-4 pe-3"
-          data-aos="fade-down"
-          data-aos-delay="100"
-        >
-          <a href="#" class="social-link twitter">
-            <i class="bi bi-twitter-x"></i>
-          </a>
-          <a href="#" class="social-link facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="#" class="social-link instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="social-link linkedin">
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </div>
-      </div>
-    </header>
+    <%- include('partials/navbar') %>
 
     <!-- Main Page********************* -->
 
@@ -244,11 +124,13 @@
             </p>
           </div>
         </div>
-        <button
-          class="btn btn-get-started mx-auto d-block py-2 px-3 text-light view-more rounded-3"
-        >
-          VIEW MORE
-        </button>
+        <a href="/gallery/all?id=0" class="text-reset text-decoration-none">
+          <button
+            class="btn btn-get-started mx-auto d-block py-2 px-3 text-light view-more rounded-3"
+          >
+            VIEW MORE
+          </button>
+        </a>
       </section>
 
       <!-- ******************About Section******************** -->
@@ -271,26 +153,21 @@
 
               <p class="mt-4 my-description">
                 I’m a professional photographer and visual storyteller based in
-                Scotland, working under Justlink 90’s Visuals. I create visuals
-                that go beyond the ordinary blending creativity, culture, and
-                emotion to produce work that feels authentic and distinctive.
-                <br />
-                <br />
-                I’m a versatile creative, working across multiple styles
-                including lifestyle, fashion, portraits, and events. Rather than
-                limiting myself to one niche, I adapt my approach to suit each
-                project, ensuring every visual tells a unique story.
+                Scotland. I create visuals that go beyond the ordinary, blending
+                creativity, culture, and delivering work that feels authentic
+                and distinctive.
 
                 <br />
                 <br />
-                My work is rooted in storytelling capturing moments and
-                transforming them into powerful narratives through both
-                photography and video. From events to music videos and creative
-                concepts, I bring ideas to life in a way that’s fresh,
-                cinematic, and intentionally different from the norm.
+                By adapting my approach to suit each project, i ensure every
+                visual tells its own unique story. My focus is simple: capture
+                moments and transform them into cinematic, story-driven visuals
+                that stand out.
+                <br />
+                <br />
               </p>
 
-              <h4 class="fs-5 mt-5">I Professionalize in</h4>
+              <h4 class="fs-5 mt-4">I Professionalize in</h4>
 
               <div class="services-container container">
                 <div class="services-wrapper row">
@@ -412,33 +289,7 @@
       </section>
     </main>
 
-    <!-- ******************Footer Section******************** -->
-
-    <footer class="footer">
-      <p
-        class="copyright text-align-center text-light d-flex align-items-center"
-      >
-        © 2026 90's Visuals. All Rights Reserved
-      </p>
-
-      <div class="footer-social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-
-      <p class="praise d-flex align-items-center">
-        Built with 💚 by
-        <a
-          href="https://dubem-portfolio-beryl.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="me ms-1"
-          >Dubem
-        </a>
-      </p>
-    </footer>
+    <%- include('partials/footer') %>
 
     <!-- CDN JS Files -->
     <!--- BootstrapJS -->
@@ -455,7 +306,7 @@
     <!-- GLIightboxJS -->
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script type="text/javascript">
-      const lightbox = GLightbox();
+      // const lightbox = GLightbox();
     </script>
     <!-- SwiperJS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
