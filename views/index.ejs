@@ -11,6 +11,31 @@
       type="image/png"
     />
 
+    <!-- ************PREVIEW META TAGS******************* -->
+    <!-- ************PREVIEW META TAGS******************* -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="90s Visuals" />
+    <meta
+      name="twitter:description"
+      content="A high-end digital portfolio for a professional photographer, curated collection of moments, textures, and stories captured through the lens."
+    />
+    <meta
+      name="twitter:image"
+      content="https://90svisuals.vercel.app/preview.png"
+    />
+
+    <meta property="og:title" content="90s Visuals" />
+    <meta
+      property="og:description"
+      content="A high-end digital portfolio for a professional photographer, curated collection of moments, textures, and stories captured through the lens."
+    />
+    <meta property="og:url" content="https://90svisuals.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://90svisuals.vercel.app/preview.png"
+    />
+    <meta property="og:type" content="website" />
+
     <!--Montserrat Font -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,16 +76,15 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="/css/app2.css" />
   </head>
 
-  <body
-    id="homePage"
-    class="position-relative overflow-x-hidden overflow-y-auto d-flex flex-column"
-  >
+  <body id="homePage">
     <%- include('partials/navbar') %>
-
     <!-- Main Page********************* -->
-
+    <div class="position-relative max-width w-100">
+      <%- include('partials/back-to-top') %>
+    </div>
     <main class="main">
       <!-- *****************Hero Section (Home)********************* -->
 
@@ -173,25 +197,30 @@
                 <div class="services-wrapper row">
                   <div class="col-6">
                     <p>
-                      <i class="bi bi-check-lg save-icon save-btn"></i> Fashion
+                      <i class="bi bi-check-lg save-icon save-btn"></i>
+                      Fashion
                     </p>
                     <p>
-                      <i class="bi bi-check-lg save-icon save-btn"></i> Wedding
+                      <i class="bi bi-check-lg save-icon save-btn"></i>
+                      Wedding
                     </p>
                     <p>
-                      <i class="bi bi-check-lg save-icon save-btn"></i> Product
+                      <i class="bi bi-check-lg save-icon save-btn"></i>
+                      Product
                     </p>
                   </div>
 
                   <div class="col-6">
                     <p>
-                      <i class="bi bi-check-lg save-icon save-btn"></i> Portaits
+                      <i class="bi bi-check-lg save-icon save-btn"></i>
+                      Portaits
                     </p>
                     <p>
                       <i class="bi bi-check-lg save-icon save-btn"></i> Sports
                     </p>
                     <p>
-                      <i class="bi bi-check-lg save-icon save-btn"></i> Birthday
+                      <i class="bi bi-check-lg save-icon save-btn"></i>
+                      Birthday
                     </p>
                   </div>
                 </div>

@@ -36,17 +36,12 @@
 }
 
 /* Color Presets******** */
-.gallery-item {
-  --gallery-background-color: none;
-}
 
 .hero {
   --gallery-background-color: none;
 }
 
 /******************* General Styling ***********************/
-
-/* **********************Navbar Styling ************************ */
 
 html,
 body {
@@ -61,6 +56,8 @@ body {
   z-index: 900;
 }
 
+/* ************************Navbar Styling ************************** */
+/* ************************Navbar Styling ************************** */
 .overlay {
   inset: 0;
   z-index: 7000;
@@ -138,10 +135,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav-menu ul li a:hover {
-  color: rgb(172, 172, 172);
-}
-
 .dropdown-ul {
   top: 80px;
   left: 35%;
@@ -163,10 +156,6 @@ body {
   font-size: 15px;
   text-decoration: none;
   color: inherit;
-}
-
-.dropdown-ul li a:hover {
-  color: rgb(172, 172, 172);
 }
 
 .header-social-links {
@@ -528,10 +517,6 @@ main {
   font-weight: 300;
 }
 
-.submit-button:hover {
-  background-color: #139463;
-}
-
 /* *****************Footer Section*********************  */
 /* *****************Footer Section*********************  */
 
@@ -589,13 +574,24 @@ main {
   .btn-get-started:hover {
     background-color: #167450;
   }
+  .nav-menu ul li a:hover {
+    color: rgb(172, 172, 172);
+  }
+
+  .dropdown-ul li a:hover {
+    color: rgb(172, 172, 172);
+  }
+
+  .submit-button:hover {
+    background-color: #139463;
+  }
 }
 
 /* *****************Responsive Section*********************  */
 /* *****************Responsive Section*********************  */
 @media (min-width: 1300px) {
   .hero-img-wrapper {
-    min-height: 800px;
+    min-height: 800px !important;
   }
 }
 
@@ -674,7 +670,7 @@ main {
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1114px) {
   .header-social-links {
     display: none !important;
   }

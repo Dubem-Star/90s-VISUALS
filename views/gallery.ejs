@@ -58,9 +58,12 @@
     id="galleryPage"
   >
     <%- include('partials/navbar') %>
+    <div class="position-relative max-width w-100">
+      <%- include('partials/back-to-top') %>
+    </div>
 
     <main style="margin-top: 180px">
-      <div class="gallery-page-cont container-fluid">
+      <div class="gallery-page-cont container-fluid max-width">
         <div class="row gy-4 justify-content-center" id="galleryPageCont">
           <h1
             class="category-title text-center text-uppercase mb-sm-5 mb-4 mt-0"

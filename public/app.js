@@ -18,8 +18,15 @@ const dropdownUl = document.getElementById("dropdownUl");
 const dropdownMobile = document.getElementById("dropdownMobile");
 const catTitle = document.getElementById("catTitle");
 const galleryPageCont = document.getElementById("galleryPageCont");
+const bttButton = document.getElementById("bttButton");
 
-// if (body.id === "homePage") {
+function bttLogic() {
+  const isScrollYPassed1k = window.scrollY >= 500;
+  bttButton.classList.toggle("show", isScrollYPassed1k);
+}
+
+window.addEventListener("scroll", bttLogic);
+
 // *************************************************
 
 let dropdownTimer;
@@ -156,11 +163,11 @@ if (colContainer) {
     col.innerHTML = `
 
 <div class= "gallery-item h-100">
-<a href="${img}" class="glightbox" title="Gallery-${num}"  data-gallery="gallery">
+<a href="${img}" class="glightbox"   data-gallery="gallery">
 <img
 src="${img}"
 class="img-fluid gallery-img "
-alt="gallery-item-${num}"
+
 />
 </a>
 </div>
@@ -313,10 +320,10 @@ if (body.id === "galleryPage") {
       "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/portrait_22.jpg",
     ],
     familyPhotos: [
-      "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_01.jpg",
+      // "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_01.jpg",
       "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_02.jpg",
       "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_03.jpg",
-      "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_04.jpg",
+      // "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_04.jpg",
       "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_05.jpg",
       "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_06.jpg",
       "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/family_07.jpg",
@@ -348,7 +355,7 @@ if (body.id === "galleryPage") {
   };
 
   const categories = [
-    { id: 0, cat: "all", images: Object.values(photos).flat() },
+    { id: 0, cat: "gallery", images: Object.values(photos).flat() },
     { id: 1, cat: "unions", images: photos.unionPhotos },
     { id: 2, cat: "portraits", images: photos.portraitPhotos },
     { id: 3, cat: "family", images: photos.familyPhotos },
@@ -356,10 +363,7 @@ if (body.id === "galleryPage") {
     {
       id: 5,
       cat: "videos",
-      images: [
-        "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto,f_auto/fashion_21.jpg",
-        "https://res.cloudinary.com/dirijnb2k/image/upload/q_auto/f_auto/v1776008031/dark_blue_groom.jpg",
-      ],
+      images: ["/photos/go_back.png"],
     },
   ];
 
@@ -375,8 +379,8 @@ if (body.id === "galleryPage") {
 
     galleryContent.innerHTML = `
     <div class="  gallery-item w-100 h-100">
-    <a href="${img}" class="glightbox" title="Gallery-${cat.cat}-${num}"  data-gallery="gallery">
-<img src="${img}" class="w-100 h-100 rounded-3 gallery-img" alt="gallery-item-${num}"/>
+    <a href="${img}" class="glightbox"   data-gallery="gallery">
+<img src="${img}" class="w-100 h-100 rounded-3 gallery-img" />
     <div>
     
 `;

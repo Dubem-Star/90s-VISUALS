@@ -1,3 +1,37 @@
 .category-title {
   font-size: clamp(35px, 5vw, 45px);
 }
+
+.back-to-top-wrapper {
+  bottom: 100px;
+  z-index: 9999;
+  transition:
+    opacity 0.2s ease-in-out,
+    visibilty 0.2s ease-in-out;
+}
+.general-slide-btn {
+  background-color: #139463;
+  width: 45px !important;
+  height: 45px !important;
+  right: 45px;
+  cursor: pointer;
+  padding: 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back-to-top-wrapper.show {
+  opacity: 1 !important;
+  visibilty: visible !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .general-slide-btn:hover {
+    background-color: #167450;
+  }
+}
+
+@media (max-width: 450px) {
+  .gallery-page main {
+    margin-top: 150px !important;
+  }
+}
