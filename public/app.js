@@ -261,8 +261,46 @@ if (servicesContainer) {
 //Contact Section**********************************
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  const submitButton = contactForm.querySelector(".submit-button");
+  const submitMessage = contactForm.querySelector(".submit-message");
+  const loader = contactForm.querySelector(".spinner-border");
+  const inputs = contactForm.querySelectorAll("input,textarea");
+  const feedback = contactForm.querySelector(".status");
+
+  const data = new FormData(contactForm);
+  const formEntries = Object.fromEntries(data.entries());
+  const isValues = Object.values(formEntries).every((val) => val !== "");
+
+  if (!isValues) {
+    submitButton.classList.add("blur-btn");
+  }
+
+  for (let input of inputs) {
+    input.addEventListener("input", () => {
+      const data = new FormData(contactForm);
+      const formEntries = Object.fromEntries(data.entries());
+      const isValues = Object.values(formEntries).every((val) => val !== "");
+
+      if (!isValues) {
+        submitButton.classList.add("blur-btn");
+      } else {
+        submitButton.classList.remove("blur-btn");
+      }
+    });
+  }
+
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    // feedback.classList.add("show");
+    // setTimeout(() => {
+    //   feedback.classList.remove("show");
+    // }, 4000);
+
+    // return;
+
+    submitMessage.style.opacity = "0";
+    loader.style.opacity = "1";
+
     const data = new FormData(contactForm);
 
     const contactInfo = {
@@ -273,7 +311,29 @@ if (contactForm) {
     };
 
     contactForm.reset();
-    // console.log(contactInfo);
+
+    const response = await fetch("http://localhost:3000/contact", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ contactDetails: contactInfo }),
+    });
+
+    const res = await response.json();
+
+    if (res.status) {
+      submitMessage.style.opacity = "1";
+      submitMessage.innerHTML = "Submit Message";
+      loader.style.opacity = "0";
+      loader.style.visiblity = "visible";
+      feedback.classList.add("show");
+      setTimeout(() => {
+        feedback.classList.remove("show");
+      }, 4000);
+    } else {
+      alert(res.message);
+    }
   });
 }
 // }

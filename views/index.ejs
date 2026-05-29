@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="90s Visuals" />
     <meta
       name="twitter:description"
-      content="A high-end digital portfolio for a professional photographer, curated collection of moments, textures, and stories captured through the lens."
+      content="A digital portfolio for a professional photographer, curated collection of moments, textures, and stories captured through the lens."
     />
     <meta
       name="twitter:image"
@@ -257,7 +257,11 @@
       <section class="contact-section cont max-width" id="contactSection">
         <div style="width: 90%" data-aos="fade-up" data-aos-delay="100">
           <h2 class="text-center mb-5 section-title">CONTACT ME</h2>
-          <form action="#" class="contact-form" id="contactForm">
+          <form
+            action="#"
+            class="contact-form position-relative"
+            id="contactForm"
+          >
             <div class="row gy-4 gx-3 justify-content-center">
               <div class="col-md-6">
                 <input
@@ -307,12 +311,24 @@
                 ></textarea>
               </div>
 
-              <div class="col-12 button-container">
-                <button class="btn submit-button" type="submit">
-                  Submit Message
+              <div class="col-12 button-container mt-0">
+                <button class="btn submit-button btn-get-started" type="submit">
+                  <div
+                    class="spinner-border text-white position-absolute start-0 end-0 top-0 bottom-0 m-auto"
+                    role="status"
+                  ></div>
+                  <span class="submit-message">Submit Message</span>
                 </button>
               </div>
             </div>
+
+            <p
+              class="status position-absolute start-0 end-0 mx-auto opacity-1 visible text-light p-1 p-md-2 text-center"
+              id="contactStatus"
+            >
+              Form sent successfully. Expect a feedback as soon as possible
+              <img src="/photos/icons/checkmark.png" class="ps-1" />
+            </p>
           </form>
         </div>
       </section>

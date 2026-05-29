@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/Dubem-Star/90s-VISUALS#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "ejs": "^5.0.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.9"
   }
 }

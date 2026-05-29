@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services Preview</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+}
+
+.overlay h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.overlay p {
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.service-card:hover::before {
+  background: rgba(0,0,0,0.6);
+}
+
+.service-card:hover .overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<div class="services-grid">
+
+  <div class="service-card">
+    <img src="https://picsum.photos/600/400?random=1">
+    <div class="overlay">
+      <h3>Weddings & Unions</h3>
+      <p>Cinematic storytelling for your most intimate celebrations.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://picsum.photos/600/400?random=2">
+    <div class="overlay">
+      <h3>Private Portraits</h3>
+      <p>Personalized sessions with editorial polish.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://picsum.photos/600/400?random=3">
+    <div class="overlay">
+      <h3>Commercial Branding</h3>
+      <p>High-end visuals for brands and businesses.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://picsum.photos/600/400?random=4">
+    <div class="overlay">
+      <h3>Social & Nightlife</h3>
+      <p>Capturing energy and authentic vibes.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://picsum.photos/600/400?random=5">
+    <div class="overlay">
+      <h3>Editorial & Fashion</h3>
+      <p>Style, movement, and dramatic lighting.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://picsum.photos/600/400?random=6">
+    <div class="overlay">
+      <h3>Cinematography</h3>
+      <p>Bringing stories to life through motion.</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -508,13 +508,52 @@ main {
   display: flex;
   justify-content: flex-start;
 }
+
 .submit-button {
   background-color: var(--special-green-color);
   padding: 15px 25px;
   color: #ffffff;
   font-family: var(--nav-font);
   text-transform: uppercase;
-  font-weight: 300;
+  position: relative;
+}
+
+.submit-button.blur-btn {
+  border: none;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.spinner-border {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+
+.contact-section .status {
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  bottom: -50px;
+  transition:
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+
+  width: fit-content;
+  /* margin-top: -35px; */
+  /* font-size: clamp(13px, 1.2vw, 16px); */
+  background-color: #139463;
+}
+
+.contact-section .status.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+
+.contact-section .status img {
+  width: 25px;
 }
 
 /* *****************Footer Section*********************  */
@@ -582,9 +621,9 @@ main {
     color: rgb(172, 172, 172);
   }
 
-  .submit-button:hover {
+  /* .submit-button:hover {
     background-color: #139463;
-  }
+  } */
 }
 
 /* *****************Responsive Section*********************  */
@@ -671,6 +710,10 @@ main {
 }
 
 @media (max-width: 1114px) {
+  .contact-section .status {
+    bottom: -100px;
+  }
+
   .header-social-links {
     display: none !important;
   }
@@ -804,6 +847,10 @@ main {
 
   .service-wrapper {
     aspect-ratio: 1 / 0.6;
+  }
+
+  .contact-section .status {
+    bottom: -110px;
   }
 }
 
