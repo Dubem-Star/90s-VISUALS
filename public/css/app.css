@@ -276,8 +276,13 @@ main {
   position: relative;
 }
 
+.contact-section .submit-button.btn-get-started:active,
+.contact-section .submit-button.btn-get-started:focus {
+  background-color: #139463 !important;
+}
+
 .btn-get-started:active,
-.btn-get-started:active {
+.btn-get-started:focus {
   background-color: #139463 !important;
 }
 
@@ -518,6 +523,15 @@ main {
   position: relative;
 }
 
+.contact-form:invalid .submit-button {
+  /* This prevents the button from looking "broken" if validation fails */
+  background-color: var(--special-green-color);
+}
+
+.submit-button.clicked {
+  background-color: var(--special-green-color) !important;
+}
+
 .submit-button.blur-btn {
   border: none;
   opacity: 0.5;
@@ -539,10 +553,7 @@ main {
     opacity 0.2s ease-in-out,
     visibility 0.2s ease-in-out,
     transform 0.2s ease-in-out;
-
   width: fit-content;
-  /* margin-top: -35px; */
-  /* font-size: clamp(13px, 1.2vw, 16px); */
   background-color: #139463;
 }
 
@@ -597,7 +608,7 @@ main {
 }
 
 .me {
-  color: var(--accent-color);
+  color: var(--special-green-color);
   text-decoration: none;
 }
 
@@ -611,7 +622,7 @@ main {
   }
 
   .btn-get-started:hover {
-    background-color: #167450;
+    background-color: #167450 !important;
   }
   .nav-menu ul li a:hover {
     color: rgb(172, 172, 172);

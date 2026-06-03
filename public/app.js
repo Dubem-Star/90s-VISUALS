@@ -267,21 +267,20 @@ if (contactForm) {
   const inputs = contactForm.querySelectorAll("input,textarea");
   const feedback = contactForm.querySelector(".status");
 
-  const data = new FormData(contactForm);
-  const formEntries = Object.fromEntries(data.entries());
-  const isValues = Object.values(formEntries).every((val) => val !== "");
+  function checkInputValues() {
+    const data = new FormData(contactForm);
+    const formEntries = Object.fromEntries(data.entries());
 
-  if (!isValues) {
+    return Object.values(formEntries).every((val) => val.trim() !== "");
+  }
+
+  if (!checkInputValues()) {
     submitButton.classList.add("blur-btn");
   }
 
   for (let input of inputs) {
     input.addEventListener("input", () => {
-      const data = new FormData(contactForm);
-      const formEntries = Object.fromEntries(data.entries());
-      const isValues = Object.values(formEntries).every((val) => val !== "");
-
-      if (!isValues) {
+      if (!checkInputValues()) {
         submitButton.classList.add("blur-btn");
       } else {
         submitButton.classList.remove("blur-btn");
@@ -291,15 +290,10 @@ if (contactForm) {
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    // feedback.classList.add("show");
-    // setTimeout(() => {
-    //   feedback.classList.remove("show");
-    // }, 4000);
-
-    // return;
 
     submitMessage.style.opacity = "0";
     loader.style.opacity = "1";
+    submitMessage.closest(".submit-button").classList.add("clicked");
 
     const data = new FormData(contactForm);
 
@@ -312,7 +306,7 @@ if (contactForm) {
 
     contactForm.reset();
 
-    const response = await fetch("http://localhost:3000/contact", {
+    const response = await fetch("/api/contact", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -328,6 +322,9 @@ if (contactForm) {
       loader.style.opacity = "0";
       loader.style.visiblity = "visible";
       feedback.classList.add("show");
+      if (!checkInputValues()) {
+        submitButton.classList.add("blur-btn");
+      }
       setTimeout(() => {
         feedback.classList.remove("show");
       }, 4000);
